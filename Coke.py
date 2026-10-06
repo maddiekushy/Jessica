@@ -1,12 +1,20 @@
-coke = {
-    "coke": "50"
-}
+def main():
+    amount_due = 50
+    
+    while amount_due > 0:
+        print(f"Amount Due: {amount_due}")
+        coin = int(input("Insert 50 cents: "))
+        
+        if coin in [50, 25, 10, 5]:
+            amount_due -= coin
+        
+    while amount_due = 0:
+            print("Thank you! Here is your coke")
 
-pay = input("insert 50 cents").int()
+    change_owed = abs(amount_due)
+    print(f"Her is your Coke! Change Owed: {change_owed}")
 
-if pay == (coke["coke"]).int()
-    print("thank you! here is your coke")
-elif pay < (coke["coke"]).int()
-    due = (coke["coke"]).int() - pay
-    pay = input("Amount due: {due})
-         
+
+
+if __name__ == "__main__":
+    main()
