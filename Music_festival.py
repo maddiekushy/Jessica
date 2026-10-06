@@ -1,11 +1,21 @@
 bands = {}
-band = input(“Enter a Musician:")
 
-while band != “done”:
-  if band.lower() in bands:
-	  bands[band.lower()] += 1
-  else:
-	  bands[band.lower()] = 1
+while True:
+    band = input("Enter an artist's name or type 'done' to finish voting: ").strip()
+    
+    if band.lower() == 'done':
+        break
 
-for key in bands:
-	print("votes:" + key + “:” + str(bands[key]))
+    if not user_input:
+        continue
+    
+    if user_input in bands:
+        bands[band] += 1
+    else:
+        bands[band] = 1
+
+band_keys = list(bands.keys())
+
+print("\n--- Votes ---")
+for band in band_keys:
+    print(f"{band}: {bands[band]}")
