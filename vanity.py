@@ -5,27 +5,25 @@ def main():
     else:
         print("Invalid")
 
-def is_valid(p):
-    if not (2 <= len(p) <= 6):
+def is_valid(plate):
+    if not (2 <= len(plate) <= 6):
         return False
 
-    if not p.isalnum():
+    if not plate.isalnum():
         return False
         
-    if not (p[0].isalpha() and p[1].isalpha()):
+    if not (plate[0].isalpha() and plate[1].isalpha()):
         return False
 
-    for i, char in enumerate(s):
+    for i, char in enumerate(plate):
         if char.isdigit():
             if char == '0':
                 return False
             
-            for rest in p[i:]:
+            for rest in plate[i:]:
                 if not rest.isdigit():
                     return False
             break
 
     return True
-
 main()
-
