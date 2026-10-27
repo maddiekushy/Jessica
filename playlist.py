@@ -3,6 +3,7 @@ import csv
 
 
 class Song:
+    
     def __init__(self, title, artist, duration):
         self.title = title
         self.artist = artist
@@ -10,6 +11,7 @@ class Song:
 
 
 class Playlist:
+    
     def __init__(self, name):
         self.name = name
         self.songs = []
